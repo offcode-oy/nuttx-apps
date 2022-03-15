@@ -1,0 +1,22 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config NETUTILS_LIBZMQ
+	bool "zeromq library (current version)"
+	default n
+	---help---
+		Enables the zeromq library.
+
+if NETUTILS_LIBZMQ
+
+config NETUTILS_LIBZMQ_URL
+	string "URL where zeromq library can be downloaded"
+	default "https://github.com/zeromq/libzmq/archive"
+
+config NETUTILS_LIBZMQ_VERSION
+	string "Version number"
+	default "4.3.4"
+
+endif

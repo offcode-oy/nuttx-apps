@@ -1,2 +1,4 @@
 /netutils/cJSON.h
 /netutils/cJSON_Utils.h
+/netutils/zmq.h
+/netutils/zmq_utils.h
