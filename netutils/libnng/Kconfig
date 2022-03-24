@@ -1,0 +1,22 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config NETUTILS_LIBNNG
+	bool "Nanomsg-ng library (current version)"
+	default n
+	---help---
+		Enables the Nanomsg-ng library.
+
+if NETUTILS_LIBNNG
+
+config NETUTILS_LIBNNG_URL
+	string "URL where nanomsg-ng library can be downloaded"
+	default "https://github.com/nanomsg/nng/archive"
+
+config NETUTILS_LIBNNG_VERSION
+	string "Version number"
+	default "1.5.2"
+
+endif
